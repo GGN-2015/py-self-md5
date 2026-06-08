@@ -2,6 +2,8 @@
 __pycache__/
 *.py[codz]
 *$py.class
+input.py
+input.self_md5.py
 
 # C extensions
 *.so

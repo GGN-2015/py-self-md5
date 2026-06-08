@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "py-self-md5"
+version = "0.1.0"
+description = "Wrap Python scripts so they print their own MD5 without reading their source at runtime."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "GGN_2015" }
+]
+keywords = ["md5", "quine", "python", "self-hash"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+py-self-md5 = "py_self_md5.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["py_self_md5"]
